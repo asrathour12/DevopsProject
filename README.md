@@ -1,8 +1,40 @@
-# Assignment_APP
+# Creating a CI/CD Pipeline 
+
+This tutorial covers the steps to create CI CD pipeline using a sample app. The steps include how to add Install Jenkins,writing 3 stage Pipeline,Writing a dockerfile
+and starting the application on a Minikube Cluster.
 
 
 
-## Getting started
+## Prerequisites :-
+* A local Instance or a Cloud Instance with any flavor of Linux
+* Java should be installed on the Instance
+* Docker Setup
+* Minikube Setup 
+
+Note :- Make sure the Jenkin server is integrated with Docker and K8 using Plugin.
+
+Workflow :-
+
+1. Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
+
+* sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+* sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+* sudo yum install fontconfig java-11-openjdk -y
+* sudo yum install jenkins 
+Once downloaded run below command :-
+
+### To Start the Jenkins :
+* Systemctl start jenkins
+* Systemctl status jenkins 
+
+### To Confirm Jenkins is Running :- 
+* netstat -tulpn 
+* systemctl jenkins status 
+* Access Webui localhost:8080
+
+
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
