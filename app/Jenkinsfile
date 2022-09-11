@@ -1,0 +1,9 @@
+Pipeline {
+    stages {
+        stage ("Git Repo") {
+            steps {
+                 git branch: 'master', url: 'https://github.com/asrathour12/DevopsProject.git'
+            }
+        }
+    }
+}
