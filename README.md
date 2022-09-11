@@ -81,6 +81,9 @@ kubectl expose pod nodejswebapp-55cfb4dcd6-bwgpr --type=Nodeport --port=80 --nam
 minikube service nodejswebapp-service --url
 
 Note :- You can create a Azure Load Balance too for a dedicated ip and route the traffic to pods running inside your cluster.
-   
+
+
+
+
 
 
