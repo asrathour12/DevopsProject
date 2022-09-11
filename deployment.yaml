@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2022-09-11T12:05:01Z"
+  generation: 1
+  labels:
+    app: nodejswebapp
+  name: nodejswebapp
+  namespace: default
+  resourceVersion: "33419"
+  uid: e9e0532e-d683-4fda-a6a7-18c61a31b0e3
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: nodejswebapp
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nodejswebapp
+    spec:
+      containers:
+      - image: asrathour12/devopsproject:v1
+        imagePullPolicy: IfNotPresent
+        name: devopsproject
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  conditions:
+  - lastTransitionTime: "2022-09-11T12:05:03Z"
+    lastUpdateTime: "2022-09-11T12:05:03Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2022-09-11T12:05:01Z"
+    lastUpdateTime: "2022-09-11T12:05:03Z"
+    message: ReplicaSet "nodejswebapp-55cfb4dcd6" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3
