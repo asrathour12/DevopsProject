@@ -44,7 +44,7 @@ Once downloaded run below command :-
 * Choose the respective repo
 * Save and Apply
 
-S### Step 2 :- Build the image with below command :-
+### Step 2 :- Build the image with below command :-
 
 docker build -t devopsproject/asrathour12 .
 
