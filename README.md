@@ -70,7 +70,7 @@ kubectl create secret docker-registry devopsproject \
 
 ### Step 6 :- Create service and attach to the deployment :-
 
-kubectl expose pod nodejswebapp-55cfb4dcd6-bwgpr --type=Nodeport --port=80 --name=nodejswebapp-service 
+kubectl expose deployment nodejswebapp --type=Nodeport --port=80 --name=nodejswebapp-service 
 
 
 ### Step 7 :- Edit the service file and add nodeport field :-
